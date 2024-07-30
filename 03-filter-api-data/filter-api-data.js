@@ -1,3 +1,5 @@
 function filterApiData(apiData, mandatoryKeys) {
-  // Add you solution here
+  return apiData.filter((item) =>
+    mandatoryKeys.every((key) => item.hasOwnProperty(key))
+  );
 }
